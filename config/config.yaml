@@ -1,0 +1,49 @@
+training_pipeline_config:
+  pipeline_name: wafer
+  artifact_dir: artifact
+
+data_ingestion_config:
+  dataset_download_url: https://github.com/entbappy/Branching-tutorial/raw/master/wafer_data.tgz
+  raw_data_dir: raw_data
+  tgz_download_dir: tgz_data
+  ingested_dir: ingested_data
+  merged_csv_dir: merged_csv
+  splited_data_dir: split_data
+  ingested_good_data_dir: good_data
+  ingested_bad_data_dir: bad_data
+  ingested_train_dir: train
+  ingested_test_dir: test 
+
+data_validation_config:
+  schema_file_name: train_schema.json
+
+
+data_transformation_config:
+  transformed_dir: transformed_data
+  transformed_train_dir: train
+  transformed_test_dir: test
+  preprocessing_dir: preprocessed
+  preprocessed_object_file_name: preprocessed.pkl
+
+
+model_trainer_config:
+  trained_model_dir: trained_model
+  clustering_model_dir: clustering_model
+  model_file_name: model.pkl
+  base_accuracy: 0.5
+
+
+model_evaluation_config:
+  model_evaluation_file_name: model_evaluation.yaml
+
+
+model_pusher_config:
+  model_export_dir: saved_models
+
+
+
+
+
+
+
+

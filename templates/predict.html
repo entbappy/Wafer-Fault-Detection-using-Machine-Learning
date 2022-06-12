@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+
+{% block head %}
+
+
+<title>Housing Estimator</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
+
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileupload" id="fileToUpload">
+            <input type="submit" value="Upload File" name="submit">
+        </form>
+    </div>
+</div>
+    </div>
+
+    {% endblock %}
